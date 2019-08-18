@@ -8,34 +8,11 @@ const strings = {
     "You are not yet engligtened",
     "The path to true englightenment comes with setbacks. Try again."
   ],
-  operators: [
+  problems: [
     {
-      name: 'and',
+      firstOperand: 9,
+      secondOperand: 5,
       operator: '&'
-    },
-    {
-      name: 'or',
-      operator: '|'
-    },
-    {
-      name: 'xor',
-      operator: '^'
-    },
-    {
-      name: 'not',
-      operator: '~'
-    },
-    {
-      name: 'left-shift',
-      operator: '<<'
-    },
-    {
-      name: 'right-shift',
-      operator: '>>'
-    },
-    {
-      name: 'zero-fill-right-shift',
-      operator: '>>>'
     }
   ]
 }

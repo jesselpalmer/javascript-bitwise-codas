@@ -1,36 +1,22 @@
 import strings from '../shared/strings'
-
-const getPositiveReponse = () => {
-  const numPositveResponses = strings.positiveResponses.length
-  const index = Math.floor((Math.random() * numPositveResponses))
-  return strings.positiveResponses[index]
-}
-
-const getNegativeResponse = () => {
-  const numNegativeResponses = strings.negativeResponses.length
-  const index = Math.floor((Math.random() * numNegativeResponses))
-  return strings.negativeResponses[index]
-}
+import { getResponse } from '../shared/guess-service'
 
 const validate = () => {
   const firstOperand = parseInt(document.getElementById('firstOperand').attributes['value'].value)
   const secondOperand = parseInt(document.getElementById('secondOperand').attributes['value'].value)
-  const answer = parseInt(document.getElementById('guess').value, 10)
+  const operatorName = document.getElementById('operator').attributes['value'].value
+  const guess = parseInt(document.getElementById('guess').value, 10)
 
-  if ((firstOperand & secondOperand) === answer) {
-    const text = getPositiveReponse()
-    document.getElementById('response').innerHTML = text
-  } else {
-    const text = getNegativeResponse()
-    document.getElementById('response').innerHTML = text
-  }
+  document.getElementById('response').innerHTML = getResponse(firstOperand, secondOperand, operatorName, guess)
 }
 
-const firstOperand = Math.floor((Math.random() * 10) + 1)
-const secondOperand = Math.floor((Math.random() * 10) + 1)
-const operator = strings.operators[0].operator
 
 const Index = () => {
+  const currentProblem = strings.problems[0]
+  const firstOperand =  currentProblem.firstOperand
+  const secondOperand = currentProblem.secondOperand
+  const operator = currentProblem.operator
+
   return (
     <div>
       <span id="firstOperand" value={firstOperand}>{firstOperand}</span>
@@ -44,6 +30,6 @@ const Index = () => {
       <span id="response"></span>
     </div>
   )
-};
+}
 
-export default Index;
+export default Index
