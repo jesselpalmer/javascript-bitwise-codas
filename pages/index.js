@@ -10,7 +10,6 @@ const validate = () => {
   document.getElementById('response').innerHTML = getResponse(firstOperand, secondOperand, operatorName, guess)
 }
 
-
 const Index = () => {
   const currentProblem = strings.problems[0]
   const firstOperand =  currentProblem.firstOperand
