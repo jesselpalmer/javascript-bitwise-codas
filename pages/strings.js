@@ -10,26 +10,32 @@ const strings = {
   ],
   operators: [
     {
-      operator: '&',
-      name: 'and'
+      name: 'and',
+      operator: '&'
     },
     {
-      'or': '|'
+      name: 'or',
+      operator: '|'
     },
     {
-      'xor': '^'
+      name: 'xor',
+      operator: '^'
     },
     {
-      'not': '~'
+      name: 'not',
+      operator: '~'
     },
     {
-      'left-shift': '<<'
+      name: 'left-shift',
+      operator: '<<'
     },
     {
-      'right-shift': '>>'
+      name: 'right-shift',
+      operator: '>>'
     },
     {
-      'zero-fill-right-shift': '>>>'
+      name: 'zero-fill-right-shift',
+      operator: '>>>'
     }
   ]
 }
