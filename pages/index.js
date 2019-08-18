@@ -1,4 +1,4 @@
-import strings from './strings'
+import strings from '../shared/strings'
 
 const getPositiveReponse = () => {
   const numPositveResponses = strings.positiveResponses.length
